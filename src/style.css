@@ -1,0 +1,192 @@
+
+*{
+    font-family: 'Delius', cursive;
+    text-decoration: none;
+  
+}
+body{
+    background: url("imagenes/fondo2.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/*Sección 1: intro*/
+#intro{
+    display:block;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#logo-title{
+    display:flex;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: center;
+}
+#logo{
+    width: 200px;
+    height: 260px;
+    margin-left: 100px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+#title{
+    font-family: 'Handlee', cursive;
+    font-size: 80px;
+    margin-top: 10px;
+    margin-left: 100px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    color:white;
+    text-shadow: 4px 6px 1px rgba(8, 8, 8, 0.712);
+}
+#description-page{
+    color:white;
+    display:flex;
+    margin-left: 150px;
+}
+#introduction{
+    color:black;
+    background-color: white;
+    border-radius: 40px;
+    text-align: center;
+    padding: 11px;
+    font-size: 21px;
+}
+
+#btn{
+    background-color:#01bc37;
+    border-radius: 40px;
+    width: 200px;
+    height: 60px;
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 100px;
+    color:black;
+    border-color: transparent;
+}
+#btn:hover{
+    background-color: #439239;
+    color: white;
+}
+
+#img-pets{
+    width: 470px;
+    height: 410px;
+    margin-right: 100px;
+    margin-left: 200px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+/*Sección 2: Deportes*/
+#sectionSports{
+    display: none;
+    align-items: center;
+    text-align: center; 
+}
+#titleSports{    
+    text-align: center;
+    color:white;
+    
+    font-size: 70px;
+    text-shadow: 4px 6px 1px rgba(8, 8, 8, 0.712);
+    padding-left: 0px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+
+}
+#card-container-sports{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-evenly;
+    margin: 20px 100px 20px 100px;
+    padding: 0px;
+}
+.card{
+    border-radius: 8px;
+    width: 180px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    box-shadow: 4px 4px 6px 1px rgb(0 0 0 / 10%);
+    margin:16px;
+    text-align: center;
+}
+.card:hover{
+    background-color: #a4d30b;
+}
+.img-sport img{
+    height: 100px;
+    width: 100px;
+    margin: 0;
+}
+.name-sport{
+    align-items: center;
+    color:black;
+}
+/*Sección 3: Tabla por deporte*/
+#medalTable{
+    display:none;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+#titleMedals{
+    text-align: center;
+    color:white;
+    font-family: 'Delius Swash Caps', cursive;
+    font-size: 70px;
+    text-shadow: 4px 6px 1px rgba(8, 8, 8, 0.712);
+    padding-left: 0px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+#playersTable{
+    font-size: 18px;
+    font-weight: bold;
+    background: transparent;
+    color:black;
+    text-align: left;
+}
+
+th{
+    background-color:#01bc37;
+    padding: 16px;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+}
+
+td{
+    background-color: white;
+    padding: 16px;
+    color: black;
+}
+.filterBtn{
+    background: white;
+    font-size: 25px;
+    border-radius: 40px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 50px;
+    font-weight: bold;
+    text-align: center;
+    border-color: transparent;
+}
+.filterBtn:hover{
+    background-color: #a4d30b
+    ;
+    color:black;
+    border-color: transparent;
+}
+option{
+    background-color:#a4d30b;
+    color:black;
+    border-color: transparent;
+}
