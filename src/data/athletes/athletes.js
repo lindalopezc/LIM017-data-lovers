@@ -13937,7 +13937,7 @@ export default {
       "medal": "Silver"
     },
     {
-      "name": "John Michael Nchekwube Obinna \"John Mikel Obi\" Mikel",
+      "name": "John Michael Nchekwube O. \"John Mikel Obi\"",
       "gender": "M",
       "height": "179",
       "weight": "86",

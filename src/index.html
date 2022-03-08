@@ -2,11 +2,342 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>Olimpiadas Río 2016</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=Delius+Swash+Caps&family=Handlee&display=swap" rel="stylesheet">
+    <link rel="icon" href="imagenes/icon.jpg">
   </head>
   <body>
-    <div id="root"></div>
+<!--Esta sección es la primera página-->
+    <section id="intro">
+      <div id="logo-title">
+        <div><!--Logo Rio 2016-->
+          <figure >
+            <img id="logo" src="imagenes/logo-rio.png">
+          </figure>
+        </div>
+        <div><!--Juegos olímpicos Rio de de Janeiro-->
+          <h1 id="title">Juegos Olímpicos Río de Janeiro 2016</h1>
+        </div>
+      </div>
+      <div id="description-page">
+        <div>
+          <!--Texto sobre las olimpiadas-->
+          <br><br>
+          <h1 id="introduction">¡Bienvenidx! en este sitio web encontrarás información importante sobre las Olimpiadas de Río 2016.
+            Podrás realizar filtros por género y tipo de medalla. ¡Comencemos!</h1><br>
+          <button id="btn">DEPORTES</button>
+        </div>
+        <div>
+          <!--Imagen de mascotitas-->
+          <figure>
+            <img id = "img-pets" src="imagenes/mascotas.png">
+          </figure>
+        </div>
+      </div>
+    </section>
+<!--Esta sección es para mostrar la sección de Disciplinas-->
+    <section id = "sectionSports">
+      <section>
+        <h1 id="titleSports">Deportes</h1>
+      </section>
+<!--Sección padre que abarca las tarjetitas con los íconos de los deportes-->
+      <section id ="card-container-sports">
+          <div class="card">
+            <a href="#">
+              <div>
+                <h1 class="name-sport">
+                  ATLETISMO
+                </h1>
+              </div>
+              <figure class="img-sport">
+              <img src="sports/atletismo.png">
+              </figure>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#">
+              <div>
+                <h1 class="name-sport">
+                  BADMINTON
+                </h1>
+              </div>
+              <figure class="img-sport">
+              <img src="sports/badminton.png">
+              </figure>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#">
+              <div>
+                <h1 class="name-sport">
+                  BALONCESTO
+                </h1>
+              </div>
+              <figure class="img-sport">
+              <img src="sports/baloncesto.png">
+              </figure>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#">
+              <div>
+                <h1 class="name-sport">
+                  BALONMANO
+                </h1>
+              </div>
+              <figure class="img-sport">
+              <img src="sports/balonmano.png">
+              </figure>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#">
+              <div>
+                <h1 class="name-sport">
+                  BOXEO
+                </h1>
+              </div>
+              <figure class="img-sport">
+              <img src="sports/boxing.png">
+              </figure>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#">
+              <div>
+                <h1 class="name-sport">
+                  CICLISMO
+                </h1>
+              </div>
+              <figure class="img-sport">
+              <img src="sports/ciclismo.png">
+              </figure>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#">
+              <div>
+                <h1 class="name-sport">
+                  ESGRIMA
+                </h1>
+              </div>
+              <figure class="img-sport">
+              <img src="sports/fencing.png">
+              </figure>
+            </a>
+          </div>         
+          <div class="card">
+            <a href="#">
+              <div>
+                <h1 class="name-sport">
+                  FUTBOL
+                </h1>
+              </div>
+              <figure class="img-sport">
+              <img src="sports/futbol.png">
+              </figure>
+            </a>
+          </div> 
+          <div class="card">
+            <a href="#">
+              <div>
+                <h1 class="name-sport">
+                  GIMNASIA
+                </h1>
+              </div>
+              <figure class="img-sport">
+              <img src="sports/gimnasia.png">
+              </figure>
+            </a>
+          </div> 
+          <div class="card">
+            <a href="#">
+              <div>
+                <h1 class="name-sport">
+                  GOLF
+                </h1>
+              </div>
+              <figure class="img-sport">
+              <img src="sports/golf.png">
+              </figure>
+            </a>
+          </div> 
+          <div class="card">
+            <a href="#">
+              <div>
+                <h1 class="name-sport">
+                  ALTEROFILIA
+                </h1>
+              </div>
+              <figure class="img-sport">
+              <img src="sports/weightlifting.png">
+              </figure>
+            </a>
+          </div> 
+          <div class="card">
+            <a href="#">
+              <div>
+                <h1 class="name-sport">
+                  HOCKEY
+                </h1>
+              </div>
+              <figure class="img-sport">
+              <img src="sports/hockey.png">
+              </figure>
+            </a>
+          </div> 
+          <div class="card">
+            <a href="#">
+              <div>
+                <h1 class="name-sport">
+                  JUDO
+                </h1>
+              </div>
+              <figure class="img-sport">
+              <img src="sports/judo.png">
+              </figure>
+            </a>
+          </div> 
+          <div class="card">
+            <a href="#">
+              <div>
+                <h1 class="name-sport">
+                  NATACIÓN
+                </h1>
+              </div>
+              <figure class="img-sport">
+              <img src="sports/natacion.png">
+              </figure>
+            </a>
+          </div> 
+          <div class="card">
+            <a href="#">
+              <div>
+                <h1 class="name-sport">
+                  PIRAGÜISMO
+                </h1>
+              </div>
+              <figure class="img-sport">
+              <img src="sports/canoeing.png">
+              </figure>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#">
+              <div>
+                <h1 class="name-sport">
+                  REMO
+                </h1>
+              </div>
+              <figure class="img-sport">
+              <img src="sports/rowing.png">
+              </figure>
+            </a>
+          </div> 
+          <div class="card">
+            <a href="#">
+              <div>
+                <h1 class="name-sport">
+                  TAEKWONDO
+                </h1>
+              </div>
+              <figure class="img-sport">
+              <img src="sports/taekwondo.png">
+              </figure>
+            </a>
+          </div>      
+          <div class="card">
+            <a href="#">
+              <div>
+                <h1 class="name-sport">
+                  TENIS
+                </h1>
+              </div>
+              <figure class="img-sport">
+              <img src="sports/tennis.png">
+              </figure>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#">
+              <div>
+                <h1 class="name-sport">
+                  TRIÁTLON
+                </h1>
+              </div>
+              <figure class="img-sport">
+              <img src="sports/triathlon.png">
+              </figure>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#">
+              <div>
+                <h1 class="name-sport">
+                  VELA
+                </h1>
+              </div>
+              <figure class="img-sport">
+              <img src="sports/sailing.png">
+              </figure>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#">
+              <div>
+                <h1 class="name-sport">
+                  VOLEIBOL
+                </h1>
+              </div>
+              <figure class="img-sport">
+              <img src="sports/volleyball.png">
+              </figure>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#">
+              <div>
+                <h1 class="name-sport">
+                  WATERPOLO
+                </h1>
+              </div>
+              <figure class="img-sport">
+              <img src="sports/waterpolo.png">
+              </figure>
+            </a>
+          </div>
+      </section>
+      
+    </section>
+
+<!--Esta sección es de la tabla de cada deporte-->
+    <section id="medalTable">
+      <div>
+        <h1 id ="titleMedals">Medallero</h1>
+        <select name ="filter" class ="filterBtn">
+          <option disabled selected>Ordenar por</option>
+          <option select id ="optionAsc" value = "ASC">Nombre A-Z </option>
+          <option select id ="optionDesc" value = "DESC">Nombre Z-A </option> 
+        </select> 
+        <select name ="filter" class ="filterBtn">
+          <option disabled selected>Género</option>
+          <option select value = "F">Femenino</option>
+          <option select value = "M">Masculino</option> 
+        </select>
+        <select name ="filter" class ="filterBtn">
+          <option disabled selected value ="">Medalla</option>
+          <option select value = "G">Oro</option>
+          <option select value = "S">Plata</option> 
+          <option select value = "B">Bronce</option> 
+        </select>
+      </div>
+      <div>
+        <table id="playersTable">
+        </table>
+      </div>
+    </section>
+
     <script src="main.js" type="module"></script>
   </body>
 </html>
