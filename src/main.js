@@ -40,9 +40,9 @@ let result = [...dataArr];
 console.log(result);
 
 let arraySports=['Athletics','Badminton','Basketball','Handball','Boxing','Cycling'];
-arraySports.push('Fencing','Football','Gymnastics','Golf','Weightlifting','Hockey','Judo');
+arraySports.push('Fencing','Football','Gymnastics','Golf','Weightlifting','Hockey','Judo',);
 arraySports.push('Swimming','Canoeing','Rowing','Taekwondo','Tennis','Triathlon','Sailing','Volleyball','Water Polo');
-
+arraySports.push('Trampolining','Archery','Table Tennis','Diving','Beach Volleyball','Shooting','Equestrianism','Rugby Sevens','Wrestling','canoeing','Rhythmic Gymnastics','Modern Pentathlon')
 //Creamos un filtro para que sólo se muestre la data del deporte seleccionado de las tarjetas:
 let dataForSport = [];
 for(let i = 0; i<arraySports.length; i++){
@@ -148,3 +148,10 @@ function sortedMedal (){
         createTable(filterMedal); 
     }
 }
+// Dar funcionalidad al boton volver//
+const btnReturn= document.getElementById("return");
+btnReturn.addEventListener("click", () => {
+    document.getElementById('medalTable').style.display='none';
+    document.getElementById('sectionSports').style.display='block';  
+})
+
