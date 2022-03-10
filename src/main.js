@@ -11,7 +11,7 @@ document.getElementById('btn').addEventListener('click',()=>{
     document.getElementById('sectionSports').style.display='block'; 
 })
 
-//Convertimos los elementos F y M por íconos, igualmente con las medallas:
+//Reemplazamos los géneros F y M por íconos, igualmente con las medallas:
 for(let i = 0; i<data.length; i++){
     if(data[i].medal ==='Bronze'){
         data[i].medal = '🥉';
@@ -30,19 +30,26 @@ for(let i = 0; i<data.length; i++){
     }
 }
 
-//Creamos un array con todos los deportes:
+
+/* Verificamos qué deportes tiene la data:
 let myArray = [];
 for(let elemento of data){
     myArray.push(elemento.sport);
 }
 const dataArr = new Set(myArray);
 let result = [...dataArr];
-console.log(result);
+console.log(result); */
 
+//Creamos un array con todos los deportes:
 let arraySports=['Athletics','Badminton','Basketball','Handball','Boxing','Cycling'];
 arraySports.push('Fencing','Football','Gymnastics','Golf','Weightlifting','Hockey','Judo',);
 arraySports.push('Swimming','Canoeing','Rowing','Taekwondo','Tennis','Triathlon','Sailing','Volleyball','Water Polo');
 arraySports.push('Trampolining','Archery','Table Tennis','Diving','Beach Volleyball','Shooting','Equestrianism','Rugby Sevens','Wrestling','canoeing','Rhythmic Gymnastics','Modern Pentathlon')
+
+
+//Traemos el ID donde está la etiqueta "<table>" de HTML:
+let playersTable=document.getElementById('playersTable');
+
 //Creamos un filtro para que sólo se muestre la data del deporte seleccionado de las tarjetas:
 let dataForSport = [];
 for(let i = 0; i<arraySports.length; i++){
@@ -55,8 +62,6 @@ for(let i = 0; i<arraySports.length; i++){
     })
 }
 
-//Traemos el ID donde está la etiqueta "<table>" de HTML:
-let playersTable=document.getElementById('playersTable');
 
 //Creamos una función que se encargue de crear la tabla y que cambie los íconos :):
 function createTable(array){
@@ -151,7 +156,10 @@ function sortedMedal (){
 // Dar funcionalidad al boton volver//
 const btnReturn= document.getElementById("return");
 btnReturn.addEventListener("click", () => {
-    document.getElementById('medalTable').style.display='none';
-    document.getElementById('sectionSports').style.display='block';  
+    playersTable.innerHTML='';
+    dataForSport = [];
+    document.getElementById('medalTable').style.display='none'; 
+    document.getElementById('sectionSports').style.display='block';
+    
 })
 
