@@ -4,7 +4,7 @@
     text-decoration: none;
 }
 body{
-    background: url("imagenes/fondo2.jpeg");
+    background: url("imagenes/fondo.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -13,7 +13,6 @@ body{
     display:block;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
 }
 
 #logo-title{

@@ -1,68 +1,60 @@
-//import { example } from './data.js';
-
 import datos from './data/athletes/athletes.js';
+import{filterData, sortData} from './data.js';
 
 let data = datos.athletes;
 
-//Llamamos al botón que nos mostrará la sección de deportes con sus dibujos:
+//Reemplazamos los géneros F y M por íconos, igualmente con las medallas:
+for(let element of data){
+    if(element.medal ==='Bronze'){
+      element.medal = '🥉';
+    }
+    else if (element.medal ==='Silver'){
+        element.medal = '🥈';
+    }
+    else{
+        element.medal = '🥇';
+    }
+    if (element.gender === 'F'){
+        element.gender='🙋🏻‍♀️';
+    }
+    else{
+        element.gender = '🙋🏻‍♂️';
+    }
+}
 
+//Llamamos al botón que nos mostrará la sección de deportes con sus dibujos:
 document.getElementById('btn').addEventListener('click',()=>{
     document.getElementById('intro').style.display='none';
     document.getElementById('sectionSports').style.display='block'; 
 })
 
-//Reemplazamos los géneros F y M por íconos, igualmente con las medallas:
-for(let i = 0; i<data.length; i++){
-    if(data[i].medal ==='Bronze'){
-        data[i].medal = '🥉';
-    }
-    else if (data[i].medal ==='Silver'){
-        data[i].medal = '🥈';
-    }
-    else{
-        data[i].medal = '🥇';
-    }
-    if (data[i].gender === 'F'){
-        data[i].gender='🙋🏻‍♀️'
-    }
-    else{
-        data[i].gender = '🙋🏻‍♂️'
-    }
+///Verificamos qué deportes tiene la data:
+let arraySports = [];
+for(let element of data){
+    arraySports.push(element.sport);
 }
 
-
-/* Verificamos qué deportes tiene la data:
-let myArray = [];
-for(let elemento of data){
-    myArray.push(elemento.sport);
-}
-const dataArr = new Set(myArray);
-let result = [...dataArr];
-console.log(result); */
-
-//Creamos un array con todos los deportes:
-let arraySports=['Athletics','Badminton','Basketball','Handball','Boxing','Cycling'];
-arraySports.push('Fencing','Football','Gymnastics','Golf','Weightlifting','Hockey','Judo',);
-arraySports.push('Swimming','Canoeing','Rowing','Taekwondo','Tennis','Triathlon','Sailing','Volleyball','Water Polo');
-arraySports.push('Trampolining','Archery','Table Tennis','Diving','Beach Volleyball','Shooting','Equestrianism','Rugby Sevens','Wrestling','canoeing','Rhythmic Gymnastics','Modern Pentathlon')
-
+//Eliminamos los deportes que se repiten:
+arraySports = arraySports.filter((item,index)=>{
+      return arraySports.indexOf(item) === index;
+    }
+)
 
 //Traemos el ID donde está la etiqueta "<table>" de HTML:
 let playersTable=document.getElementById('playersTable');
 
-//Creamos un filtro para que sólo se muestre la data del deporte seleccionado de las tarjetas:
+//Creamos un bucle para que se muestre la data del deporte seleccionado de las tarjetas:
 let dataForSport = [];
 for(let i = 0; i<arraySports.length; i++){
     let card= document.getElementsByClassName('card')[i];
     card.addEventListener('click', ()=>{
     document.getElementById('sectionSports').style.display='none';
     document.getElementById('medalTable').style.display='block';
-    dataForSport  =  dataForSport.concat(data.filter(p => p.sport === arraySports[i]));
+    dataForSport  =  dataForSport.concat(data.filter(p => p.sport === card.getAttribute('value')));
+    playersTable.innerHTML = '';
     createTable(dataForSport);
-    })
-}
-
-
+    }
+)}
 //Creamos una función que se encargue de crear la tabla y que cambie los íconos :):
 function createTable(array){
     playersTable.innerHTML+='<tr><th>NOMBRE</th><th>GÉNERO</th>'
@@ -77,7 +69,6 @@ function createTable(array){
         fila += '<td>'+ array[i].medal +'</td></tr>';
         playersTable.innerHTML+= fila;
     }
-    
     return array;
 }
 
@@ -86,80 +77,38 @@ let sortNames = document.getElementsByClassName('filterBtn')[0];
 let filterGender = document.getElementsByClassName('filterBtn')[1];
 let filterMedal = document.getElementsByClassName('filterBtn')[2];
 
-//Función que ordena la data por género:
-filterGender.addEventListener('change', sortedGender);
-
-function sortedGender (){
-    if (filterGender.value ==='F'){
-        const filterFemale = dataForSport.filter(p => p.gender ==='🙋🏻‍♀️');
-        playersTable.innerHTML = '';
-        createTable(filterFemale);
-    }
-    else{
-        const filterMale = dataForSport.filter(p => p.gender ==='🙋🏻‍♂️');
-        playersTable.innerHTML = '';
-        createTable(filterMale);
-    }
-}
-
-//Función que ordena la data por nombres.
-sortNames.addEventListener('change', sortedNames);
-function sortedNames(){
-    if (sortNames.value === 'ASC'){ 
-        dataForSport.sort( (a,b) => {
-        if (a.name > b.name) {
-            return 1;
-        }
-        if (a.name < b.name) {
-            return -1;
-        }
-            return 0;
-        });
+//Evento que ordena la data por nombres.
+sortNames.addEventListener('change', ()=>{
+    if (sortData(dataForSport,sortNames.value,['ASC','DESC'])){
         playersTable.innerHTML='';
-        createTable( dataForSport );
+        createTable(sortData(dataForSport,sortNames.value,['ASC','DESC']));
+        }
     }
-    else{
-        dataForSport.sort( (a,b) => {
-        if (a.name > b.name) {
-            return -1;
+)
+
+//Función que filtra la data por género:
+filterGender.addEventListener('change', ()=>{
+    if(filterData(dataForSport, filterGender.value)){
+    playersTable.innerHTML = '';
+    createTable(filterData(dataForSport, filterGender.value));
         }
-        if (a.name < b.name) {
-            return ;
-        }
-            return 0;
-        });
+    }
+)
+
+//Función que filtra la data por medalla:
+filterMedal.addEventListener('change', ()=>{
+    if (filterData(dataForSport,filterMedal.value)){
         playersTable.innerHTML='';
-        createTable( dataForSport );
+        createTable(filterData(dataForSport,filterMedal.value));
+        }
     }
-}
+)
 
-//Función que ordena la data por medalla:
-filterMedal.addEventListener('change', sortedMedal);
-
-function sortedMedal (){
-    if (filterMedal.value ==='G'){
-        const filterMedal = dataForSport.filter(p => p.medal ==='🥇');
-        playersTable.innerHTML = '';
-        createTable(filterMedal);
-    }
-    else if (filterMedal.value ==='S'){
-        const filterMedal = dataForSport.filter(p => p.medal ==='🥈');
-        playersTable.innerHTML = '';
-        createTable(filterMedal);
-    }
-    else{
-        const filterMedal = dataForSport.filter(p => p.medal ==='🥉');
-        playersTable.innerHTML = '';
-        createTable(filterMedal); 
-    }
-}
-// Dar funcionalidad al boton volver//
-const btnReturn= document.getElementById("return");
-btnReturn.addEventListener("click", () => {
+// Evento para que el botón "volver" nos retorne a la vista de tarjetas de deportes:
+document.getElementById("return").addEventListener("click", () => {
     playersTable.innerHTML='';
     dataForSport = [];
     document.getElementById('medalTable').style.display='none'; 
     document.getElementById('sectionSports').style.display='block';
-    
-})
-
+    }
+)
