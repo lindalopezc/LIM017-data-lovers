@@ -79,26 +79,20 @@ let filterMedal = document.getElementsByClassName('filterBtn')[2];
 
 //Evento que ordena la data por nombres.
 sortNames.addEventListener('change', ()=>{
-    if (sortData(dataForSport,sortNames.value,['ASC','DESC'])){
-        playersTable.innerHTML='';
-        createTable(sortData(dataForSport,sortNames.value,['ASC','DESC']));
-    }
+    playersTable.innerHTML='';
+    createTable(sortData(dataForSport,sortNames.value));
 })
 
 //Función que filtra la data por género:
 filterGender.addEventListener('change', ()=>{
-    if(filterData(dataForSport, filterGender.value)){
     playersTable.innerHTML = '';
     createTable(filterData(dataForSport, filterGender.value));
-    }
 })
 
 //Función que filtra la data por medalla:
 filterMedal.addEventListener('change', ()=>{
-    if (filterData(dataForSport,filterMedal.value)){
-        playersTable.innerHTML='';
-        createTable(filterData(dataForSport,filterMedal.value));
-    }
+    playersTable.innerHTML='';
+    createTable(filterData(dataForSport,filterMedal.value));
 })
 
 // Evento para que el botón "volver" nos retorne a la vista de tarjetas de deportes:

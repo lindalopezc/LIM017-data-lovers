@@ -1,8 +1,8 @@
 // estas funciones son de ejemplo
 
-export const sortData = (data, sortBy,sortOrden) => {
+export const sortData = (data, sortOrden) => {
 
-    if (sortBy === sortOrden[0]){ 
+    if (sortOrden === 'ASC'){ 
         data.sort ((a,b)=> {
           if (a.name > b.name) {
               return 1;
@@ -30,11 +30,11 @@ export const sortData = (data, sortBy,sortOrden) => {
 export const filterData = (data, condition) => {
   
     if (condition ==='F'){
-      const filterFemale = data.filter(p => p.gender ==='🙋🏻‍♀️');
+      const filterFemale = data.filter(p => p.gender ==='🙋🏻‍♀️'|| p.gender ==='F');
       return filterFemale;
     }
     else if (condition ==='M'){
-      const filterMale = data.filter(p => p.gender ==='🙋🏻‍♂️');
+      const filterMale = data.filter(p => p.gender ==='🙋🏻‍♂️'|| p.gender ==='M');
       return filterMale;
     }
     else {
