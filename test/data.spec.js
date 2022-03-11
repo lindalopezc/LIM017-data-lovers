@@ -1,3 +1,4 @@
+import { it } from 'eslint/lib/rule-tester/rule-tester';
 import { sortData,filterData} from '../src/data.js';
 
 const testData = [
@@ -48,23 +49,24 @@ describe('Aplicación de tests para función sortData', () => {
 
 
 describe('Aplicación de tests para la función filterData', () => {
-  it('Solo existe 1 mujer en la dataPrueba', () => {
+
+  it('Solo existe 1 mujer en la data de muestra', () => {
     expect(filterData(testData,'F').length).toEqual(1);
   });
 
-  it('Solo existen 3 hombres en la dataPrueba', () => {
+  it('Solo existen 4 hombres en la data de muestra', () => {
     expect(filterData(testData,'M').length).toEqual(4);
   });
-  it('Solo existen 3 medallas de Bronze en la dataPrueba', () => {
+  it('Solo existen 3 medallas de Bronze en la data de muestra', () => {
     expect(filterData(testData,'Bronze').length).toEqual(3);
   });
-  it('Solo existen 2 medallas de Plata en la dataPrueba', () => {
+  it('Solo existen 2 medallas de Plata en la data de muestra', () => {
     expect(filterData(testData,'Silver').length).toEqual(2);
   });
-  it('Solo existen 3 participantes de "Taekwondo" en la dataPrueba', () => {
+  it('Solo existen 3 participantes de "Taekwondo" en la data de muestra', () => {
     expect(filterData(testData,'Taekwondo').length).toEqual(3);
   });
-  it('Solo existen 3 participantes de "Gymnastics" en la dataPrueba', () => {
+  it('Solo existen 3 participantes de "Gymnastics" en la data de muestra', () => {
     expect(filterData(testData,'Gymnastics').length).toEqual(2);
   });
 }); 
