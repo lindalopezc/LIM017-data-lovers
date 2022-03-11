@@ -37,8 +37,7 @@ for(let element of data){
 //Eliminamos los deportes que se repiten:
 arraySports = arraySports.filter((item,index)=>{
       return arraySports.indexOf(item) === index;
-    }
-)
+})
 
 //Traemos el ID donde está la etiqueta "<table>" de HTML:
 let playersTable=document.getElementById('playersTable');
@@ -55,7 +54,8 @@ for(let i = 0; i<arraySports.length; i++){
     createTable(dataForSport);
     }
 )}
-//Creamos una función que se encargue de crear la tabla y que cambie los íconos :):
+
+//Creamos una función que se encargue de crear la tabla:
 function createTable(array){
     playersTable.innerHTML+='<tr><th>NOMBRE</th><th>GÉNERO</th>'
     + '<th>PAÍS</th><th>EDAD</th><th>EVENTO</th><th>MEDALLA</th></tr>';
@@ -82,27 +82,24 @@ sortNames.addEventListener('change', ()=>{
     if (sortData(dataForSport,sortNames.value,['ASC','DESC'])){
         playersTable.innerHTML='';
         createTable(sortData(dataForSport,sortNames.value,['ASC','DESC']));
-        }
     }
-)
+})
 
 //Función que filtra la data por género:
 filterGender.addEventListener('change', ()=>{
     if(filterData(dataForSport, filterGender.value)){
     playersTable.innerHTML = '';
     createTable(filterData(dataForSport, filterGender.value));
-        }
     }
-)
+})
 
 //Función que filtra la data por medalla:
 filterMedal.addEventListener('change', ()=>{
     if (filterData(dataForSport,filterMedal.value)){
         playersTable.innerHTML='';
         createTable(filterData(dataForSport,filterMedal.value));
-        }
     }
-)
+})
 
 // Evento para que el botón "volver" nos retorne a la vista de tarjetas de deportes:
 document.getElementById("return").addEventListener("click", () => {
@@ -110,5 +107,4 @@ document.getElementById("return").addEventListener("click", () => {
     dataForSport = [];
     document.getElementById('medalTable').style.display='none'; 
     document.getElementById('sectionSports').style.display='block';
-    }
-)
+})

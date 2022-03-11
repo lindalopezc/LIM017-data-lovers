@@ -3,7 +3,7 @@
 export const sortData = (data, sortBy,sortOrden) => {
 
     if (sortBy === sortOrden[0]){ 
-        data.sort( (a,b) => {
+        data.sort ((a,b)=> {
           if (a.name > b.name) {
               return 1;
           }
@@ -50,8 +50,8 @@ export const filterData = (data, condition) => {
       else{
         const filterMedal = data.filter(p => p.medal ==='🥉');
         return filterMedal; 
+      }
     }
-  }
 };
 
 
