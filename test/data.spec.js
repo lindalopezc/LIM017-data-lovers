@@ -1,65 +1,70 @@
 import { sortData,filterData} from '../src/data.js';
 
-const dataPrueba = [
+const testData = [
   {
     "name": "Giovanni Abagnale",
     "gender": "M",
-    "sport": "Rowing",
-    "team": "Italy",
-    "event": "Rowing Men's Coxless Pairs",
+    "sport": "Taekwondo",
     "medal": "Bronze"
   },
   {
     "name": "Patimat Abakarova",
     "gender": "F",
     "sport": "Taekwondo",
-    "team": "Azerbaijan",
-    "event": "Taekwondo Women's Flyweight",
     "medal": "Bronze"
   },
   {
     "name": "Luc Abalo",
     "gender": "M",
-    "sport": "Handball",
-    "team": "France",
-    "event": "Handball Men's Handball",
+    "sport": "Taekwondo",
     "medal": "Silver"
   },
   {
     "name": "Saeid Morad Abdevali",
     "gender": "M",
-    "sport": "Wrestling",
-    "team": "Iran",
-    "event": "Wrestling Men's Middleweight, Greco-Roman",
+    "sport": "Gymnastics",
     "medal": "Bronze"
   },
   {
     "name": "Denis Mikhaylovich Ablyazin",
     "gender": "M",
     "sport": "Gymnastics",
-    "team": "Russia",
-    "event": "Gymnastics Men's Team All-Around",
     "medal": "Silver"
   }
 ]
 
 describe('Aplicación de tests para función sortData', () => {
   it('El return de la función sortData es de tipo: Objeto', () => {
-    expect(typeof sortData(dataPrueba, 'ASC')).toBe('object');
+    expect(typeof sortData(testData, 'ASC')).toBe('object');
   });
 
   it('El primer nombre de la data ordenada de manera ascendente es: Denis Mikhaylovich Ablyazin', () => {
-    expect(sortData(dataPrueba,'ASC')[0].name).toEqual('Denis Mikhaylovich Ablyazin');
+    expect(sortData(testData,'ASC')[0].name).toEqual('Denis Mikhaylovich Ablyazin');
+  });
+  it('El primer nombre de la data ordenada de manera descendente es: Saeid Morad Abdevali', () => {
+    expect(sortData(testData,'DESC')[0].name).toEqual('Saeid Morad Abdevali');
   });
 });
 
 
 describe('Aplicación de tests para la función filterData', () => {
   it('Solo existe 1 mujer en la dataPrueba', () => {
-    expect(filterData(dataPrueba,'F').length).toEqual(1);
+    expect(filterData(testData,'F').length).toEqual(1);
   });
 
   it('Solo existen 3 hombres en la dataPrueba', () => {
-    expect(filterData(dataPrueba,'M').length).toEqual(4);
+    expect(filterData(testData,'M').length).toEqual(4);
+  });
+  it('Solo existen 3 medallas de Bronze en la dataPrueba', () => {
+    expect(filterData(testData,'Bronze').length).toEqual(3);
+  });
+  it('Solo existen 2 medallas de Plata en la dataPrueba', () => {
+    expect(filterData(testData,'Silver').length).toEqual(2);
+  });
+  it('Solo existen 3 participantes de "Taekwondo" en la dataPrueba', () => {
+    expect(filterData(testData,'Taekwondo').length).toEqual(3);
+  });
+  it('Solo existen 3 participantes de "Gymnastics" en la dataPrueba', () => {
+    expect(filterData(testData,'Gymnastics').length).toEqual(2);
   });
 }); 

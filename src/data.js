@@ -39,19 +39,22 @@ export const filterData = (data, condition) => {
     }
     else {
 
-      if (condition ==='G'){
-        const filterMedal = data.filter(p => p.medal ==='🥇');
+      if (condition ==='Golden'){
+        const filterMedal = data.filter(p => p.medal ==='🥇'|| p.medal ==='Golden');
         return filterMedal;
       }
-      else if (condition ==='S'){
-        const filterMedal = data.filter(p => p.medal ==='🥈');
+      else if (condition ==='Silver'){
+        const filterMedal = data.filter(p => p.medal ==='🥈'|| p.medal ==='Silver');
       return filterMedal;
       }
-      else{
-        const filterMedal = data.filter(p => p.medal ==='🥉');
+      else if (condition ==='Bronze'){
+        const filterMedal = data.filter(p => p.medal ==='🥉' || p.medal ==='Bronze');
         return filterMedal; 
       }
+      else{
+        const dataForSport = data.filter(element => element.sport === condition);
+        return dataForSport;
+      }
     }
-};
-
+}
 

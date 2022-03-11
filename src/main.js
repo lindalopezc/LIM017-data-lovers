@@ -49,7 +49,7 @@ for(let i = 0; i<arraySports.length; i++){
     card.addEventListener('click', ()=>{
     document.getElementById('sectionSports').style.display='none';
     document.getElementById('medalTable').style.display='block';
-    dataForSport  =  dataForSport.concat(data.filter(p => p.sport === card.getAttribute('value')));
+    dataForSport  =  dataForSport.concat(filterData(data,card.getAttribute('value')));
     playersTable.innerHTML = '';
     createTable(dataForSport);
     }
