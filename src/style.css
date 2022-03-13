@@ -360,16 +360,6 @@ td {
     width: 200px;
     height: 50px;
   }
-  .filterBtn:hover {
-    background-color: #a4d30b;
-    color: black;
-    border-color: transparent;
-  }
-  option {
-    background-color: #a4d30b;
-    color: black;
-    border-color: transparent;
-  }
 
   th {
     padding: 16px;
