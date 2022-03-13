@@ -325,10 +325,15 @@
 
 <!--Esta sección es de la tabla de cada deporte-->
     <section id="medalTable">
-      <section>
+      <div>
         <h1 id ="titleMedals">Medallero</h1>
-      </section>
-      <section id="filters">
+      </div>
+      <div id = "search-and-return">
+        <input id="txtBuscador" type="text" placeholder="Nombre o Apellido" />
+        <button id="btnBuscador">Buscar 🔍</button>
+        <button id="return">Volver</button>
+      </div>
+      <div id="filters">
         <select name ="filter" class ="filterBtn">
           <option disabled selected>Ordenar por</option>
           <option select id ="optionAsc" value = "ASC">Nombre A-Z </option>
@@ -345,14 +350,12 @@
           <option select value = "Silver">Plata</option> 
           <option select value = "Bronze">Bronce</option> 
         </select>
-        <button id="return">Volver</button>
-    </section>
+      </div>
       <div>
         <table id="playersTable">
         </table>
       </div>
     </section>
-
     <script src="main.js" type="module"></script>
   </body>
 </html>

@@ -56,18 +56,18 @@ for(let i = 0; i<arraySports.length; i++){
 )}
 
 //Creamos una función que se encargue de crear la tabla:
-function createTable(array){
-    playersTable.innerHTML+='<tr><th>NOMBRE</th><th>GÉNERO</th>'
-    + '<th>PAÍS</th><th>EDAD</th><th>EVENTO</th><th>MEDALLA</th></tr>';
+const createTable = (array) => {
+    playersTable.innerHTML+=`<tr><th>NOMBRE</th>
+    <th>GÉNERO</th><th>PAÍS</th><th>EDAD</th>
+    <th>EVENTO</th><th>MEDALLA</th></tr>`;
      
     for(let i = 0; i<array.length; i++){
-        let fila = '<tr><td>'+ array[i].name +'</td>';
-        fila += '<td>'+ array[i].gender +'</td>';
-        fila += '<td>'+ array[i].team +'</td>';
-        fila += '<td>'+ array[i].age +'</td>';
-        fila += '<td>'+ array[i].event +'</td>';
-        fila += '<td>'+ array[i].medal +'</td></tr>';
-        playersTable.innerHTML+= fila;
+        playersTable.innerHTML+=`<tr><td>${array[i].name}</td>
+        <td>${array[i].gender}</td>
+        <td>${array[i].team}</td>
+        <td>${array[i].age}</td>
+        <td>${array[i].event}</td>
+        <td>${array[i].medal}</td></tr>`;
     }
     return array;
 }
@@ -101,4 +101,21 @@ document.getElementById("return").addEventListener("click", () => {
     dataForSport = [];
     document.getElementById('medalTable').style.display='none'; 
     document.getElementById('sectionSports').style.display='block';
+})
+
+//Evento que muestra los nombres que coinciden con la busquedad del usuario🔍 :
+document.getElementById("btnBuscador").addEventListener("click", ()=> {
+    
+    const txtBuscado = document.getElementById('txtBuscador').value;
+    let array =[];
+    let index;
+    for(let element of dataForSport){
+        index = element.name.search(txtBuscado);
+        if( index >= 0){
+            array.push(element);
+            playersTable.innerHTML = '';
+            createTable(array);
+            
+        }
+    }
 })
