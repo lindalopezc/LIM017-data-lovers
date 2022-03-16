@@ -1,0 +1,436 @@
+* {
+  font-family: "Delius", cursive;
+  text-decoration: none;
+}
+body {
+  background: url("imagenes/fondo.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+#intro {
+  display: block;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#logo-title {
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+}
+#logo {
+  width: 120px;
+  height: 150px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+#title {
+  font-family: "Handlee", cursive;
+  font-size: 35px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  color: white;
+  text-shadow: 4px 2px 1px rgb(8 8 8 / 71%);
+}
+#description-page {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#introduction {
+  color: black;
+  background-color: white;
+  border-radius: 40px;
+  text-align: center;
+  padding: 11px;
+  font-size: 18px;
+}
+#btn-sports{
+  background-color: #01bc37;
+  border-radius: 40px;
+  width: 120px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  border-color: transparent;
+  margin-left: 130px;
+}
+#btn-stadistics{
+  background-color: #01bc37;
+  border-radius: 40px;
+  margin-top: 10px;
+  width: auto;
+  height: 50px;
+  margin-left: 110px;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  border-color: transparent;
+}
+#btn-sports:hover {
+  background-color: #439239;
+  color: white;
+}
+#btn-stadistics:hover {
+  background-color: #439239;
+  color: white;
+}
+
+#img-pets {
+  width: 400px;
+  height: 380px;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+/*Sección 2: Deportes*/
+#sectionSports {
+  display: none;
+  align-items: center;
+  text-align: center;
+}
+.titleSports {
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  text-shadow: 4px 6px 1px rgba(8, 8, 8, 0.712);
+  padding-left: 0px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+#card-container-sports {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 20px 0px 20px 0px;
+  padding: 0px;
+}
+.card {
+  border-radius: 8px;
+  width: 26%;
+  height: 120px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  text-align: center;
+  flex-direction: column;
+}
+.card:hover {
+  background-color: #a4d30b;
+}
+.img-sport img {
+  height: 60px;
+  width: 60px;
+  margin: 0px;
+  padding-top: 0px;
+}
+.name-sport {
+  font-size: 15px;
+  align-items: center;
+  color: black;
+  margin-bottom: 0px;
+  margin-top: 2px;
+}
+/*Sección 3: Tabla por deporte*/
+#medalTable {
+  display: none;
+  align-items: center;
+}
+#titleMedals {
+  text-align: center;
+  color: white;
+  font-family: "Delius Swash Caps", cursive;
+  font-size: 35px;
+  text-shadow: 4px 6px 1px rgba(8, 8, 8, 0.712);
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+#filters {
+  display: flex;
+  flex-direction: row;
+}
+.filterBtn {
+  background: white;
+  font-size: 15px;
+  border-radius: 40px;
+  margin-bottom: 20px;
+  width: 150px;
+  height: 35px;
+  font-weight: bold;
+  text-align: center;
+  border-color: transparent;
+  margin-right: 8px;
+}
+.filterBtn:hover {
+  background-color: #a4d30b;
+  color: black;
+  border-color: transparent;
+}
+option {
+  background-color: #a4d30b;
+  color: black;
+  border-color: transparent;
+}
+#btn-return-one,#btn-return-two,#btn-return-three {
+    background-color: #01bc37;
+    border-radius: 40px;
+    width: 70px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 8px;
+    color: black;
+    border-color: transparent;
+}
+#btn-return-one, #btn-return-three{
+    margin-left: 250px;
+}
+#btn-return-three{
+  margin-bottom: 10px;
+}
+#btn-return-one:hover {
+    background-color: #439239;
+    color: white;
+  }
+  #btn-return-two:hover {
+    background-color: #439239;
+    color: white;
+  }
+
+
+/*Buscador*/
+#search-and-return {
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+    margin-bottom: 15px;
+}
+
+#input-text {
+    border-radius: 15px;
+    width: 200px;
+    height: 28px;
+    border-color: transparent;
+    border-style: none;
+}
+#button-search {
+    border-radius: 20px;
+    background: #01bc37;
+    width: 85px;
+    height: 30px;
+    margin-left: 113px;
+    border: none;
+    position: absolute;
+    font-weight: bold;
+}
+#button-search:hover{
+    background-color: #439239;
+    color: white;
+}  
+
+
+/*Tabla por deporte*/
+
+#playersTable {
+  font-size: 10px;
+  font-weight: bold;
+  background: transparent;
+  color: black;
+  text-align: left;
+}
+
+th {
+  background-color: #01bc37;
+  padding: 8px;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+}
+
+td {
+  background-color: white;
+  padding: 8px;
+  color: black;
+}
+
+/*Sección 4, para los gráficos estadísticos */
+
+#stadistics{
+  display: none;
+}
+#graph-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#first-graphic{
+  position: relative;
+  background-color: white;
+  width: 80vw;
+  height: 50vh;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#second-graphic{
+  position: relative;
+  background-color: white;
+  width: 40vw;
+  height: 40vh;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px; 
+}
+
+
+@media only screen and (min-width: 768px) {
+  /*Sección 1: intro*/
+  #intro {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  #logo-title {
+    margin-left: 100px;
+    margin-right: 100px;
+    flex-direction: row;
+  }
+
+  #logo {
+    width: 200px;
+    height: 260px;
+    margin-left: 100px;
+  }
+  #title {
+    font-size: 80px;
+    margin-top: 10px;
+    margin-left: 100px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    color: white;
+    text-shadow: 4px 6px 1px rgba(8, 8, 8, 0.712);
+  }
+  #description-page {
+    color: white;
+    display: flex;
+    margin-left: 150px;
+    flex-direction: row;
+  }
+  #introduction {
+    font-size: 21px;
+  }
+
+  #btn-sports, #btn-stadistics {
+    width: 200px;
+    height: 60px;
+    font-size: 22px;
+    margin-left: 100px;
+  }
+
+  #img-pets {
+    width: 470px;
+    height: 410px;
+    margin-right: 100px;
+    margin-left: 200px;
+  }
+
+  /*Sección 2: Deportes*/
+  #sectionSports {
+    display: none;
+    align-items: center;
+    text-align: center;
+  }
+  .titleSports {
+    font-size: 70px;
+  }
+  #card-container-sports {
+    margin: 20px 100px 20px 100px;
+  }
+  .name-sport {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .card {
+    border-radius: 8px;
+    width: 180px;
+    height: 180px;
+    margin-bottom: 15px;
+    margin: 16px;
+  }
+
+  .img-sport img {
+    height: 100px;
+    width: 100px;
+    margin: 0;
+  }
+
+
+  /*Sección 3: Tabla por deporte*/
+  #medalTable{
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+  #titleMedals {
+    color: white;
+    font-size: 70px;
+    text-shadow: 4px 6px 1px rgba(8, 8, 8, 0.712);
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+  /*Buscador*/
+  #search-and-return {
+    margin-bottom: 15px;
+    margin-left: 500px;
+
+  }
+  #input-text {
+    border-radius: 20px;
+    width: 300px;
+    height: 40px;
+    font-size: 18px;
+    margin-left: 100px;
+  }
+
+  #button-search {
+    margin-left: 315px;
+    width: 100px;
+    height: 42px;
+    font-size: 18px;
+  }
+  #btn-return-one,#btn-return-two,#btn-return-three {
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    margin-right: 0px;
+    margin-left: 55px;
+  }
+  #btn-return-one{
+    margin-left: 70%;
+  }
+  #btn-return-three{
+    margin-left: 80%;
+  }
+
+  #playersTable {
+    font-size: 18px;
+  }
+  .filterBtn {
+    font-size: 25px;
+    width: 200px;
+    height: 50px;
+  }
+
+  th {
+    padding: 16px;
+  }
+
+  td {
+    padding: 16px;
+  }
+}
