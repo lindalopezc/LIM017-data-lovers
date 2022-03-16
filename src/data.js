@@ -30,28 +30,44 @@ export const sortData = (data, sortOrden) => {
 export const filterData = (data, condition) => {
   
     if (condition ==='F'){
-      const filterFemale = data.filter(element => element.gender ==='🙋🏻‍♀️'|| element.gender ==='F');
-      return filterFemale;
+      return data.filter(element => element.gender ==='🙋🏻‍♀️'|| element.gender ==='F');
     }
     else if (condition ==='M'){
-      const filterMale = data.filter(element => element.gender ==='🙋🏻‍♂️'|| element.gender ==='M');
-      return filterMale;
+      return data.filter(element => element.gender ==='🙋🏻‍♂️'|| element.gender ==='M');
     }
     else if (condition ==='Golden'){
-      const filterMedal = data.filter(element => element.medal ==='🥇'|| element.medal ==='Golden');
-      return filterMedal;
+      return data.filter(element => element.medal ==='🥇'|| element.medal ==='Golden');
     }
     else if (condition ==='Silver'){
-      const filterMedal = data.filter(element => element.medal ==='🥈'|| element.medal ==='Silver');
-    return filterMedal;
+    return data.filter(element => element.medal ==='🥈'|| element.medal ==='Silver');
     }
     else if (condition ==='Bronze'){
-      const filterMedal = data.filter(element => element.medal ==='🥉' || element.medal ==='Bronze');
-      return filterMedal; 
+      return data.filter(element => element.medal ==='🥉' || element.medal ==='Bronze');
     }
     else{
-      const dataForSelementort = data.filter(element => element.sport === condition);
-      return dataForSelementort;
+      return data.filter(element => element.sport === condition);
     }
 }
 
+export const computeStats=(data,position)=>{
+  let arrayTeam = [];
+  for(let element of data){
+      arrayTeam.push(element.team);
+  }
+//Generamos un objeto con los nombres de los países y la cantidad de medallas. 
+let medalsByCountry ={};
+  for(let element of arrayTeam){
+      (medalsByCountry[element]) ? medalsByCountry[element] += 1 : medalsByCountry[element] = 1;
+  }
+// Creamos un array con keys "name" y "valor" para guardar nombres de países y número de medallas.
+let array=[];
+  for(let propiedad in medalsByCountry){
+    array.push({name:propiedad, valor: medalsByCountry[propiedad]})
+  }
+//Ordenamos los países por número de medallas obtenidas de manera descendente, retornando un array con los 10 primeros.
+array.sort((a,b)=>{return b.valor - a.valor})
+  for(let i=array.length; i>position;i--){
+    array.pop(array[i]);
+  }
+return array;
+}

@@ -48,7 +48,7 @@ body {
   padding: 11px;
   font-size: 18px;
 }
-#btn {
+#btn-sports{
   background-color: #01bc37;
   border-radius: 40px;
   width: 120px;
@@ -59,10 +59,27 @@ body {
   border-color: transparent;
   margin-left: 130px;
 }
-#btn:hover {
+#btn-stadistics{
+  background-color: #01bc37;
+  border-radius: 40px;
+  margin-top: 10px;
+  width: auto;
+  height: 50px;
+  margin-left: 110px;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  border-color: transparent;
+}
+#btn-sports:hover {
   background-color: #439239;
   color: white;
 }
+#btn-stadistics:hover {
+  background-color: #439239;
+  color: white;
+}
+
 #img-pets {
   width: 400px;
   height: 380px;
@@ -75,7 +92,7 @@ body {
   align-items: center;
   text-align: center;
 }
-#titleSports {
+.titleSports {
   text-align: center;
   color: white;
   font-size: 35px;
@@ -159,7 +176,7 @@ option {
   color: black;
   border-color: transparent;
 }
-#return {
+#btn-return-one,#btn-return-two,#btn-return-three {
     background-color: #01bc37;
     border-radius: 40px;
     width: 70px;
@@ -170,10 +187,21 @@ option {
     color: black;
     border-color: transparent;
 }
-#return:hover {
+#btn-return-one, #btn-return-three{
+    margin-left: 250px;
+}
+#btn-return-three{
+  margin-bottom: 10px;
+}
+#btn-return-one:hover {
     background-color: #439239;
     color: white;
   }
+  #btn-return-two:hover {
+    background-color: #439239;
+    color: white;
+  }
+
 
 /*Buscador*/
 #search-and-return {
@@ -183,15 +211,14 @@ option {
     margin-bottom: 15px;
 }
 
-
-#txtBuscador {
+#input-text {
     border-radius: 15px;
     width: 200px;
     height: 28px;
     border-color: transparent;
     border-style: none;
 }
-#btnBuscador {
+#button-search {
     border-radius: 20px;
     background: #01bc37;
     width: 85px;
@@ -201,10 +228,10 @@ option {
     position: absolute;
     font-weight: bold;
 }
-#btnBuscador:hover{
+#button-search:hover{
     background-color: #439239;
     color: white;
-  }  
+}  
 
 
 /*Tabla por deporte*/
@@ -230,6 +257,37 @@ td {
   padding: 8px;
   color: black;
 }
+
+/*Sección 4, para los gráficos estadísticos */
+
+#stadistics{
+  display: none;
+}
+#graph-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#first-graphic{
+  position: relative;
+  background-color: white;
+  width: 80vw;
+  height: 50vh;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#second-graphic{
+  position: relative;
+  background-color: white;
+  width: 40vw;
+  height: 40vh;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px; 
+}
+
 
 @media only screen and (min-width: 768px) {
   /*Sección 1: intro*/
@@ -268,7 +326,7 @@ td {
     font-size: 21px;
   }
 
-  #btn {
+  #btn-sports, #btn-stadistics {
     width: 200px;
     height: 60px;
     font-size: 22px;
@@ -288,7 +346,7 @@ td {
     align-items: center;
     text-align: center;
   }
-  #titleSports {
+  .titleSports {
     font-size: 70px;
   }
   #card-container-sports {
@@ -312,6 +370,7 @@ td {
     margin: 0;
   }
 
+
   /*Sección 3: Tabla por deporte*/
   #medalTable{
     margin-left: 200px;
@@ -330,7 +389,7 @@ td {
     margin-left: 500px;
 
   }
-  #txtBuscador {
+  #input-text {
     border-radius: 20px;
     width: 300px;
     height: 40px;
@@ -338,18 +397,24 @@ td {
     margin-left: 100px;
   }
 
-  #btnBuscador {
+  #button-search {
     margin-left: 315px;
     width: 100px;
     height: 42px;
     font-size: 18px;
   }
-  #return {
+  #btn-return-one,#btn-return-two,#btn-return-three {
     width: 100px;
     height: 40px;
     font-size: 18px;
     margin-right: 0px;
     margin-left: 55px;
+  }
+  #btn-return-one{
+    margin-left: 70%;
+  }
+  #btn-return-three{
+    margin-left: 80%;
   }
 
   #playersTable {

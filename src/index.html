@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Delius&family=Delius+Swash+Caps&family=Handlee&display=swap" rel="stylesheet">
     <link rel="icon" href="imagenes/icon.jpg">
+
   </head>
   <body>
 <!--Esta sección es la primera página-->
@@ -29,7 +30,10 @@
             Podrás realizar filtros por género y tipo de medalla. ¡Comencemos!</h1>
           </div>
           <div>
-          <button id="btn">DEPORTES</button>
+            <button id="btn-sports">DEPORTES</button>
+          <div>
+            <button id="btn-stadistics">CURIOSIDADES</button>
+          </div>
           </div>
           </div>
         <div>
@@ -40,11 +44,12 @@
         </div>
       </div>
     </section>
-<!--Seección es para mostrar la sección de Disciplinas-->
+<!--Sección es para mostrar los deportes-->
     <section id = "sectionSports">
 <!--Sección hijo que contiene el título-->
       <section>
-        <h1 id="titleSports">Deportes</h1>
+        <h1 class="titleSports">Deportes</h1>
+        <button id="btn-return-one">Volver</button>
       </section>
 <!--Sección que abarca las tarjetas con los íconos de cada deportes-->
       <section id ="card-container-sports">
@@ -322,6 +327,21 @@
           </div>
       </section>
     </section>
+<!--Sección para mostrar las estadísticas-->
+    <section id="stadistics">
+      <section>
+        <h1 class="titleSports">Curiosidades</h1>
+        <button id="btn-return-three">Volver</button>
+      </section>
+      <section id="graph-container">
+        <div id="first-graphic">
+          <canvas id="myChart"></canvas>
+        </div>
+        <div id="second-graphic">
+          <canvas id ="graphic-gender"></canvas>
+        </div>
+      </section>
+    </section>
 
 <!--Esta sección es de la tabla de cada deporte-->
     <section id="medalTable">
@@ -329,9 +349,9 @@
         <h1 id ="titleMedals">Medallero</h1>
       </div>
       <div id = "search-and-return">
-        <input id="txtBuscador" type="text" placeholder="Nombre o Apellido" />
-        <button id="btnBuscador">Buscar 🔍</button>
-        <button id="return">Volver</button>
+        <input id="input-text" type="text" placeholder="Nombre o Apellido" />
+        <button id="button-search">Buscar 🔍</button>
+        <button id="btn-return-two">Volver</button>
       </div>
       <div id="filters">
         <select name ="filter" class ="filterBtn">
@@ -356,6 +376,7 @@
         </table>
       </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js" integrity="sha256-ErZ09KkZnzjpqcane4SCyyHsKAXMvID9/xwbl/Aq1pc=" crossorigin="anonymous"></script>
     <script src="main.js" type="module"></script>
   </body>
 </html>
