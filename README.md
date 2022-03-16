@@ -57,9 +57,9 @@ Para poder conocer a las mujeres más destacadas en su deporte y la representati
 
 Durante tu trabajo desarrollamos un prototipo a lapiz y papel para distribuir los requerimientos que se necesitarían cumplir en el proyecto final.
 
-![Imagen text](https://github.com/lindalopezc/LIM017-data-lovers/blob/main/src/imagenes/prototipo1.jpeg);
-![Imagen text](https://github.com/lindalopezc/LIM017-data-lovers/blob/main/src/imagenes/prototipo2.jpeg);
-![Imagen text](https://github.com/lindalopezc/LIM017-data-lovers/blob/main/src/imagenes/prototipo3.jpeg);
+![Imagen text](https://github.com/lindalopezc/LIM017-data-lovers/blob/main/src/imagenes/prototipo1.jpeg)
+![Imagen text](https://github.com/lindalopezc/LIM017-data-lovers/blob/main/src/imagenes/prototipo2.jpeg)
+![Imagen text](https://github.com/lindalopezc/LIM017-data-lovers/blob/main/src/imagenes/prototipo3.jpeg)
 
 ### Prototipo de alta fidelidad
 
@@ -74,10 +74,10 @@ Se creó un prototipo final en Figma, para ello anexamos el siguiente link: http
 
 ### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
  Al culminar 3 sprints, como resultado final en nuestra implementación en HTML, CSS y JavaScript, obtuvimos lo siguiente:
-![Imagen text](https://github.com/lindalopezc/LIM017-data-lovers/blob/main/src/imagenes/resultado-final-1.png);
-![Imagen text](https://github.com/lindalopezc/LIM017-data-lovers/blob/main/src/imagenes/resultado-final-2.png);
-![Imagen text](https://github.com/lindalopezc/LIM017-data-lovers/blob/main/src/imagenes/resultado-final-3.png);
-![Imagen text](https://github.com/lindalopezc/LIM017-data-lovers/blob/main/src/imagenes/resultado-final-4.png);
+![Imagen text](https://github.com/lindalopezc/LIM017-data-lovers/blob/main/src/imagenes/resultado-final-1.png)
+![Imagen text](https://github.com/lindalopezc/LIM017-data-lovers/blob/main/src/imagenes/resultado-final-2.png)
+![Imagen text](https://github.com/lindalopezc/LIM017-data-lovers/blob/main/src/imagenes/resultado-final-3.png)
+![Imagen text](https://github.com/lindalopezc/LIM017-data-lovers/blob/main/src/imagenes/resultado-final-4.png)
 
 ### Testeos de usabilidad
 
