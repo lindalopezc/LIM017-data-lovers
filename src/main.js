@@ -127,17 +127,8 @@ document.getElementById('button-search').addEventListener('click', ()=> {
     }
 })
 
-
-//Generamos un objeto para conocer la cantidad de mujeres y varones.
-let peopleByGender = {Female:0,Male:0};
-for(let element of dataForAthletes){
-    (element.gender === 'F' || element.gender ==='🙋🏻‍♀️')? peopleByGender.Female += 1: peopleByGender.Male += 1;
-}
-console.log(peopleByGender);
-
 //Evento para seccion "Curiosidades":
 document.getElementById("btn-stadistics").addEventListener("click", () => {
     document.getElementById("intro").style.display = "none";
     document.getElementById("stadistics").style.display = "block";
   });
-  

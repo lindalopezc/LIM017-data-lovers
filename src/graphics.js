@@ -2,7 +2,7 @@
 /* eslint-disable no-undef */
 // eslint-disable-next-line no-unused-vars
 import{dataForAthletes} from './main.js';
-import{computeStats} from './data.js';
+import{computeStats,porcentGender} from './data.js';
 
 
 const myChart = document.getElementById("myChart");
@@ -66,16 +66,20 @@ const firstGraphic = new Chart(myChart, {
 
 //Gráfica pie para género:
 
-const gender= ['Femenino','Masculino'];
-const count =[969,1054];
+let arrayForGender= [];
+let count =[];
+for(let element of porcentGender(dataForAthletes,2023) ){
+  arrayForGender.push(element.gender);
+  count.push(element.valor);
+}
 const secondGraphic = new Chart(graphicForGender, {
     type: "pie",
     data:{
-        labels:gender,
+        labels:arrayForGender,
         datasets:[
             {
                 label:'Género',
-                data: count,
+                data: [964,1054],
                 backgroundColor:['rgb(216, 133, 163)','rgb(120, 151, 171)']
             },
         ],
@@ -87,11 +91,11 @@ const secondGraphic = new Chart(graphicForGender, {
                 display:true,
                 align:'center',
                 position:'top',
-                text:'Participantes por género',
+                text:`Participantes por género: Mujeres: ${count[0]}%, Hombres:${count[1]}%`,
                 font:{
                     size:20,
                     family:"Delius",
-                }
+                },
             },
             legend: {
               position: "top",

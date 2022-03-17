@@ -1,5 +1,5 @@
 import { it } from 'eslint/lib/rule-tester/rule-tester';
-import { sortData,filterData, computeStats} from '../src/data.js';
+import { sortData,filterData, computeStats, porcentGender} from '../src/data.js';
 
 const testData = [
   {
@@ -90,5 +90,17 @@ describe('Aplicación de test para función computeStats',()=>{
   });
   it('Japón tiene 3 medallas en la data de muestra', () => {
     expect((computeStats(testData,3))[1].valor).toEqual(2);
+  });
+})
+
+describe('Aplicación de test para función porcentGender',()=>{
+  it('La función porcentGender retorna un array', () => {
+    expect((typeof porcentGender(testData,6))).toBe('object');
+  });
+  it('El 83% de hombres ganaron medallas', () => {
+    expect((porcentGender(testData,6))[1].valor).toEqual(83);
+  });
+  it('El 17% de mujeres ganaron medallas', () => {
+    expect((porcentGender(testData,6))[0].valor).toEqual(17);
   });
 })
