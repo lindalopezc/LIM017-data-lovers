@@ -54,20 +54,20 @@ export const computeStats=(data,position)=>{
   for(let element of data){
       arrayTeam.push(element.team);
   }
-//Generamos un objeto con los nombres de los países y la cantidad de medallas. 
-let medalsByCountry ={};
+  //Generamos un objeto con los nombres de los países y la cantidad de medallas. 
+  let medalsByCountry ={};
   for(let element of arrayTeam){
       (medalsByCountry[element]) ? medalsByCountry[element] += 1 : medalsByCountry[element] = 1;
   }
-// Creamos un array con keys "name" y "valor" para guardar nombres de países y número de medallas.
-let array=[];
+  // Creamos un array con keys "name" y "valor" para guardar nombres de países y número de medallas.
+  let array=[];
   for(let propiedad in medalsByCountry){
     array.push({name:propiedad, valor: medalsByCountry[propiedad]})
   }
-//Ordenamos los países por número de medallas obtenidas de manera descendente, retornando un array con los 10 primeros.
-array.sort((a,b)=>{return b.valor - a.valor})
+  //Ordenamos los países por número de medallas obtenidas de manera descendente, retornando un array con los 10 primeros.
+  array.sort((a,b)=>{return b.valor - a.valor})
   for(let i=array.length; i>position;i--){
     array.pop(array[i]);
   }
-return array;
+  return array;
 }

@@ -2,9 +2,9 @@
 /* eslint-disable no-console */
 /* eslint-disable no-undef */
 import datos from './data/athletes/athletes.js';
-import{filterData, sortData, computeStats} from './data.js';
+import{filterData, sortData} from './data.js';
 
-let dataForAthletes = datos.athletes;
+export const dataForAthletes = datos.athletes;
 
 //Reemplazamos los géneros F y M por íconos, igualmente con las medallas:
 for(let element of dataForAthletes){
@@ -127,115 +127,17 @@ document.getElementById('button-search').addEventListener('click', ()=> {
     }
 })
 
-//En adelante haremos la implementación de las gráficas de países con más número de medallas y de género:
 
-//Generamos un objeto con la cantidad de mujeres y varones.
+//Generamos un objeto para conocer la cantidad de mujeres y varones.
 let peopleByGender = {Female:0,Male:0};
 for(let element of dataForAthletes){
     (element.gender === 'F' || element.gender ==='🙋🏻‍♀️')? peopleByGender.Female += 1: peopleByGender.Male += 1;
 }
 console.log(peopleByGender);
 
-//Sección para gráficas:
-
-//Gráfica para países destacados:
+//Evento para seccion "Curiosidades":
 document.getElementById("btn-stadistics").addEventListener("click", () => {
     document.getElementById("intro").style.display = "none";
     document.getElementById("stadistics").style.display = "block";
   });
   
-let myChart = document.getElementById("myChart");
-let teams = [];
-let value =[];
-for(let element of computeStats(dataForAthletes,10)){
-    teams.push(element.name);
-    value.push(element.valor);
-}
-
-// eslint-disable-next-line no-unused-vars
-let firstGraphic = new Chart(myChart, {
-  type: "bar",
-  data: {
-    labels: teams,
-    datasets: [
-      {
-        label: "Medallas obtenidas",
-        data: value,
-        backgroundColor: [
-            'rgb(154, 220, 255)',
-            'rgb(255, 248, 154)',
-            'rgb(255, 178, 166)',
-            'rgb(255, 138, 174)',
-            'rgb(212, 122, 232)',
-            'rgb(244, 190, 238)',
-            'rgb(168, 236, 231)',
-            'rgb(244, 190, 238)',
-            'rgb(216, 133, 163)',
-            'rgb(120, 151, 171)',
-            ],
-      },
-    ],
-  },
-  options: {
-    indexAxis: "y",
-    elements: {
-      bar: {
-        borderWidth: 2,
-      },
-    },
-    maintainAspectRatio:false,
-    plugins: {
-      legend: {
-        position: "bottom",
-      },
-      title:{
-        display:true,
-        align:'center',
-        position:'top',
-        text:'Países destacados',
-        font:{
-            size:20,
-            family:"Delius",
-        }
-    }
-    }
-  }
-});
-
-
-//Gráfica pie para género:
-let graphicForGender=document.getElementById('graphic-gender');
-let gender= ['Femenino','Masculino'];
-let count =[969,1054];
-let secondGraphic = new Chart(graphicForGender, {
-    type: "pie",
-    data:{
-        labels:gender,
-        datasets:[
-            {
-                label:'Género',
-                data: count,
-                backgroundColor:['rgb(216, 133, 163)','rgb(120, 151, 171)']
-            },
-        ],
-    },
-    options:{
-        maintainAspectRatio:false,
-        plugins: {
-            title:{
-                display:true,
-                align:'center',
-                position:'top',
-                text:'Participantes por género',
-                font:{
-                    size:20,
-                    family:"Delius",
-                }
-            },
-            legend: {
-              position: "top",
-            }
-          }
-    },
-}
-)
