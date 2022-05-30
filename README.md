@@ -53,14 +53,6 @@ Para poder conocer a las mujeres más destacadas en su deporte y la representati
 
 ## 3. Diseño de la interfaz de usuario UI
 
-### Prototipo de baja fidelidad
-
-Durante tu trabajo desarrollamos un prototipo a lapiz y papel para distribuir los requerimientos que se necesitarían cumplir en el proyecto final.
-
-![Imagen text](https://github.com/lindalopezc/LIM017-data-lovers/blob/main/src/imagenes/prototipo1.jpeg)
-![Imagen text](https://github.com/lindalopezc/LIM017-data-lovers/blob/main/src/imagenes/prototipo2.jpeg)
-![Imagen text](https://github.com/lindalopezc/LIM017-data-lovers/blob/main/src/imagenes/prototipo3.jpeg)
-
 ### Prototipo de alta fidelidad
 
 Se creó un prototipo final en Figma, para ello anexamos el siguiente link: https://www.figma.com/proto/xEnGv9SBnZzBZp8M42g4LL/Rio-2016?node-id=17%3A5&scaling=min-zoom&page-id=0%3A1.
