@@ -1,18 +1,9 @@
-# Proyecto Data Lovers: Juegos Olímpicos Río de Janeiro 2016
+# 📊 Data Lovers: Juegos Olímpicos Río de Janeiro 2016
 
-## Índice
-
-* [1. Resumen del proyecto](#1-resumen-del-proyecto)
-* [2. Investigación UX](#2-investigacion-ux)
-* [3. Diseño de la interfaz de usuario](#3-diseño-de-la-interfaz-de-usuario-ui)
-* [4. Desarrollo del proyecto](#4-desarrollo-del-proyecto)
-
-***
-
-## 1. Introducción
+## 📎1. Introducción
 Los **Juegos olímpicos de Río de Janeiro** fue un evento multideportivo internacional, celebrado en la ciudad de Río de Janeiro, Brasil, entre el 5 y el 21 de agosto de 2016. Un dato importante de este evento fue la elección de Río como sede de los Juegos Olímpicos para el año 2016. Además fue la primera vez que se realizó dicho evento en un país sudamericano, la segunda en un país de Latinoamérica. Debido a los miles de participantes de distintas disciplinas y categorías se obtuvo una data interesante que necesitaba organizarse para dar a conocer a los fanáticos de los deportes quienes obtuvieron una o más medallas en dicho evento.
 
- ![imagen](https://imagenes.t13.cl/images/original/2019/07/1562341409-0001hv3wt.jpg?width=800)
+ ![imagen](https://www.gratistodo.com/wp-content/uploads/2016/07/olimpiadas-rio-de-janeiro-2016.jpg)
  
 En base a ello desarrollamos una página web dirigida a todas las personas fanáticas de los deportes, que desean conocer los resultados obtenidos en los **Juegos olímpicos Río de Janeiro 2016** de manera ordenada y interfáz amigable los campeones de todas las disciplinas utilizando filtros por deporte, género y por medallero.
 
