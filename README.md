@@ -1,11 +1,11 @@
 # 📊 Data Lovers: Juegos Olímpicos Río de Janeiro 2016
 
 ## 📎1. Introducción
-Los **Juegos olímpicos de Río de Janeiro** fue un evento multideportivo internacional, celebrado en la ciudad de Río de Janeiro, Brasil, entre el 5 y el 21 de agosto de 2016. Fue la primera vez que se realizó dicho evento en un país sudamericano, la segunda en un país de Latinoamérica. Debido a los miles de participantes de distintas disciplinas y categorías se obtuvo una data interesante que necesitaba organizarse para dar a conocer a los fanáticos de los deportes quienes obtuvieron una o más medallas en dicho evento.
+Los **Juegos olímpicos de Río de Janeiro** fueron un evento multideportivo internacional, celebrado en la ciudad de Río de Janeiro, Brasil, entre el 5 y el 21 de agosto de 2016. Fue la primera vez que se realizó dicho evento en un país sudamericano y la segunda en un país de Latinoamérica. Debido a los miles de participantes de distintas disciplinas y categorías se obtuvo una data interesante que necesitaba organizarse para dar a conocer qué deportistas obtuvieron medallas de oro, plata y bronce dependiendo de su disciplina.
 
  ![imagen](https://s1.eestatic.com/2017/07/05/deportes/juegos-olimpicos/juegos_olimpicos-juegos_olimpicos_2016-coi_-comite_olimpico_internacional_228990320_38598434_1024x576.jpg)
  
-En base a ello desarrollamos una página web dirigida a todas las personas fanáticas de los deportes, que desean conocer los resultados obtenidos en los **Juegos olímpicos Río de Janeiro 2016** de manera ordenada y interfáz amigable los campeones de todas las disciplinas utilizando filtros por deporte, género y por medallero.
+En base a ello, desarrollamos una página web dirigida a todas las personas fanáticas de los deportes, que desean conocer los resultados obtenidos en los **Juegos olímpicos Río de Janeiro 2016** a los campeones de todas las disciplinas, utilizando filtros por deporte, género y medallas.
 
 ## 2. Investigación UX
 
